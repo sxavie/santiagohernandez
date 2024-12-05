@@ -1,0 +1,88 @@
+---
+import SkillIcons from "../components/Welcome/SkillIcons.astro";
+import AngularIcon from "../icons/Angular.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import IonicIcon from "../icons/Ionic.astro";
+import NodeIcon from "../icons/Nodejs.astro";
+import NpmIcon from "../icons/Npm.astro";
+import MongoIcon from "../icons/MongoDb.astro";
+
+import { Image } from "astro:assets";
+import developerPhoto from "../public/developer.png";
+---
+
+<div class="layout relative flex bg-gradient-to-r from-zinc-950 to-zinc-700">
+    <div class="hero flex items-center p-3 pt-16">
+        <span class="hero-text text-white text-5xl font-semibold">
+            <p>Hello</p> Im <span class="text-[#10f7d7]">Santiago</span>,
+            <p>Web Developer</p>
+        </span>
+    </div>
+    <div class="photo flex items-center m-auto">
+        <Image class="w-[450px]" src={developerPhoto} alt="devphoto" />
+    </div>
+    <div class="buttons p-3 text-white">
+        full stack developer.
+
+        <div
+            class="buttons-wrapper flex mt-5 p-1 gap-10 text-[#10f7f7] text-sm"
+        >
+            <div
+                class="cv-btn border-[1px] border-[#10f7d7] px-6 py-1 cursor-pointer"
+            >
+                View my CV
+            </div>
+            <div class="booking-btn px-4 py-1 underline cursor-pointer">
+                Booking
+            </div>
+        </div>
+    </div>
+    <div class="skills p-3 flex items-center gap-2">
+        <SkillIcons skill="Angular">
+            <AngularIcon
+                size="35"
+                lfill="#535458"
+                rfill="#3d3e42"
+                fill="#b2b3b7"
+            />
+        </SkillIcons>
+        <SkillIcons skill="Astro">
+            <AstroIcon size="35" fill="#b2b3b7" />
+        </SkillIcons>
+        <SkillIcons skill="Ionic">
+            <IonicIcon size="35" fill="#b2b3b7" />
+        </SkillIcons>
+        <SkillIcons skill="NodeJs">
+            <NodeIcon size="35" lfill="#b2b3b7" rfill="#535458" />
+        </SkillIcons>
+        <SkillIcons skill="Npm">
+            <NpmIcon size="35" fill="#b2b3b7" lfill="#535458" />
+        </SkillIcons>
+        <SkillIcons skill="MongoDB">
+            <MongoIcon size="35" fill="#b2b3b7" lfill="#535458" />
+        </SkillIcons>
+    </div>
+</div>
+
+<style>
+    .layout {
+        display: grid;
+        grid-template-areas: "hero photo" "buttons photo" "skills photo";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 100px;
+        grid-gap: 2px;
+    }
+    .hero {
+        grid-area: hero;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .photo {
+        grid-area: photo;
+    }
+    .buttons {
+        grid-area: buttons;
+    }
+    .skills {
+        grid-area: skills;
+    }
+</style>

@@ -1,0 +1,33 @@
+---
+import LinkedinIcon from "../icons/Linkedin.astro";
+import GithubIcon from "../icons/Github.astro";
+import MessageIcon from "../icons/Message.astro";
+---
+
+<ul class="flex gap-4">
+    <li class="m-auto">
+        <a
+            class="flex gap-1 hover:text-[#10f7d7]"
+            href="https://www.linkedin.com/in/santiago-hern%C3%A1ndez-3b2472133/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <LinkedinIcon size="14" fill="#f3f3f3" /> LinkedIn
+        </a>
+    </li>
+    <li class="m-auto">
+        <a
+            class="flex gap-1 hover:text-[#10f7d7]"
+            href="https://github.com/sxavie"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <GithubIcon size="14" fill="#f3f3f3" /> GitHub
+        </a>
+    </li>
+    <li class="rounded-[50%] bg-gray-600 p-2">
+        <a href="mailto:santiago.hdv@gmail.com">
+            <MessageIcon size="16" fill="#10f7d7" hover:fill="#f3f3f3" />
+        </a>
+    </li>
+</ul>
