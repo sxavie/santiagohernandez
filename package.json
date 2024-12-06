@@ -5,12 +5,22 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:href": "astro build --base-href ./",
+    "build:github": "npm run rm:docs && npm run build:href && npm run copy:dist && npm run rm:dist",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "rm:docs": "del docs",
+    "rm:dist": "del dist",
+    "copy:dist": "copyfiles dist/* ./docs -a -f && npm run copy:distall",
+    "copy:distall": "copyfiles dist/_astro/* ./docs/_astro -a -f"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.3",
     "astro": "^5.0.1",
     "tailwindcss": "^3.4.16"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "del-cli": "^6.0.0"
   }
 }
