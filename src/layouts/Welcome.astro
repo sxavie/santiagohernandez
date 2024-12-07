@@ -11,7 +11,9 @@ import { Image } from "astro:assets";
 import developerPhoto from "../public/developer.png";
 ---
 
-<div class="layout relative flex bg-gradient-to-r from-zinc-950 to-zinc-700 px-10">
+<div
+    class="layout relative flex bg-gradient-to-t from-zinc-950 to-zinc-700 px-10"
+>
     <div class="hero flex items-center p-3 pt-16">
         <span class="hero-text text-white text-5xl font-semibold">
             <p>Hello</p> Im <span class="text-[#10f7d7]">Santiago</span>,
@@ -19,7 +21,7 @@ import developerPhoto from "../public/developer.png";
         </span>
     </div>
     <div class="photo flex items-center m-auto">
-        <Image class="w-[450px]" src={developerPhoto} alt="devphoto" />
+        <!-- <Image class="w-[450px]" src={developerPhoto} alt="devphoto" /> -->
     </div>
     <div class="buttons p-3 text-white">
         full stack developer.
@@ -30,10 +32,10 @@ import developerPhoto from "../public/developer.png";
             <div
                 class="cv-btn border-[1px] border-[#10f7d7] px-6 py-1 cursor-pointer"
             >
-                View my CV
+                <a href="https://www.linkedin.com/in/santiago-hern%C3%A1ndez-3b2472133/"> View my CV </a>
             </div>
             <div class="booking-btn px-4 py-1 underline cursor-pointer">
-                Booking
+                <!-- Booking -->
             </div>
         </div>
     </div>
