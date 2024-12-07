@@ -1,0 +1,99 @@
+---
+import Item from "../../components/Portfolio/Item.astro";
+import HollowImage from "../../public/hollow_logo.png";
+
+const items = [
+    {
+        title: "Hollow Rock",
+        description:
+            "I am currently developing a mobile application where the owner has the ability to manage their business. Specifically, it's a gym where routines are provided and user tracking is maintained.",
+        imageUrl:
+            {HollowImage},
+        independient: true,
+    },
+    {
+        title: "UnitedHealt Group",
+        description:
+            "Joined an Accenture team in the healthcare sector, where we primarily utilize Angular as the main technology. Our work is structured under the Scrum methodology, ensuring efficient and collaborative development processes.",
+        imageUrl:
+            "https://th.bing.com/th/id/OIF.544jHaZ3BOXs4KjS3oBxMA?rs=1&pid=ImgDetMain",
+        independient: false,
+    },
+    {
+        title: "Amazon",
+        description:
+            "Joined an Accenture team with the purpose of developing an LLM model for artificial intelligence. The model was trained and categorized to make it as humanly intelligent as possible.",
+        imageUrl:
+            "https://th.bing.com/th/id/OIP.pq-n9Y1q2sULbArHb5XgjQHaFj?rs=1&pid=ImgDetMain",
+        independient: false,
+    },
+    {
+        title: "Charter Communications",
+        description:
+            "Joined an Accenture team focused on supporting a web and mobile application housed within a Monorepo, dedicated to delivering telecommunications services to end users. Utilize Angular alongside auxiliary technologies, including testing frameworks, analytics, and other development tools to ensure best practices",
+        imageUrl:
+            "https://disabilityin.org/wp-content/uploads/2018/02/Charter-Communications-e1558657232951.png",
+        independient: false,
+    },
+    {
+        title: "Accenture",
+        description:
+            "Currently, I have been working for this consultancy since 2022. During this time, I have developed skills in various web frameworks and acquired different backend and frontend abilities. I have been involved in developing and maintaining products for several important clients.",
+        imageUrl:
+            "https://fastly.4sqi.net/img/general/600x600/18520511_1zUi8F41UDR5fnPak_W4PQgQdq-aGtMHs4ZYhGXkuO8.jpg",
+        independient: false,
+    },
+    {
+        title: "Definity First",
+        description:
+            "At this consultancy, I served for 1 year in 2021, where I developed what I now maintain as my primary skill, Angular. I worked for an auto insurance client, Chubb, where we developed a project focused on hybrid mobile applications for Android & iOS using the Ionic framework.",
+        imageUrl:
+            "https://ml.globenewswire.com/Resource/Download/a15a3bfa-daa8-49b7-a65a-036bbbef2ca9?size=3",
+        independient: false,
+    },
+    {
+        title: "The Home Depot",
+        description:
+            "I served THM client during my tenure at consulting firm NEORIS, working as a database analyst. I developed skills in data analysis and database fundamentals, primarily using the SQL engine.",
+        imageUrl:
+            "https://corporate.homedepot.com/sites/default/files/image_gallery/THD_logo.jpg",
+        independient: false,
+    },
+    {
+        title: "UDEM",
+        description:
+            "I provided my services to a client while working at consulting firm NEORIS. Here, I worked as a web developer for 3 years, where I developed skills in technologies such as HTML, CSS, JavaScript, and C#.",
+        imageUrl:
+            "https://www.ashoka.org/sites/default/files/2022-05/UDEM-per-Fausto-Presutti.jpeg",
+        independient: false,
+    },
+    {
+        title: "NEORIS",
+        description:
+            "NEORIS is a consulting firm, where we provided software development and maintenance services for various clients. This was where I began my professional journey, and I worked at this consultancy for several years.",
+        imageUrl:
+            "https://i0.wp.com/businesspost.ng/wp-content/uploads/2017/05/NEORIS.jpg?w=1000&ssl=1",
+        independient: false,
+    },
+];
+---
+
+<div class="p-10 text-center">
+    <span class="text-3xl font-black"> Portfolio. </span>
+    <div class="flex flex-wrap justify-center mt-10 gap-4">
+        {
+            items.map((item) => {
+                return (
+                    <Item
+                        title={item.title}
+                        description={item.description}
+                        imageUrl={item.imageUrl}
+                        independient={item.independient}
+                    />
+                );
+            })
+        }
+    </div>
+</div>
+
+<style></style>
