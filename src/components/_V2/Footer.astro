@@ -1,0 +1,33 @@
+---
+import AstroLogo from "@icons/v2/technologies/AstroLogo.astro";
+import Tailwind from "@icons/v2/technologies/Tailwind.astro";
+---
+
+<footer
+    class="p-6 border-t-2 flex flex-col sm:flex-row justify-between items-center text-black/60"
+>
+    <div
+        class="mb-4 flex flex-col text-center sm:text-start sm:flex-row gap-x-8 text-sm items-center"
+    >
+        <span>This site was made with the Astro and Tailwind frameworks. </span>
+
+        <span>Santiago Hernandez - 12/2024</span>
+
+        <div class="flex justify-center gap-x-2 m-2">
+            <AstroLogo />
+            <Tailwind />
+        </div>
+    </div>
+    <div class="mb-4 flex gap-x-6 text-sm">
+        <a
+            class="hover:contrast-200"
+            href="https://github.com/sxavie"
+            target="_blank">Github</a
+        >
+        <a
+            class="hover:contrast-200"
+            href="https://www.linkedin.com/in/santiago-hern%C3%A1ndez-3b2472133/"
+            target="_blank">LinkedIn</a
+        >
+    </div>
+</footer>
