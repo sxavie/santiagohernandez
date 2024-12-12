@@ -1,0 +1,89 @@
+---
+import Heading from "@components/_V2/SectionHeading.astro";
+import Angular from "@icons/v2/technologies/Angular.astro";
+import Html from "@icons/v2/technologies/Html.astro";
+import Css from "@icons/v2/technologies/Css.astro";
+import Javascript from "@icons/v2/technologies/Javascript.astro";
+import Typescript from "@icons/v2/technologies/Typescript.astro";
+import Cucumber from "@icons/v2/technologies/Cucumber.astro";
+import Github from "@icons/v2/technologies/Github.astro";
+import Selenium from "@icons/v2/technologies/Selenium.astro";
+import Ionic from "@icons/v2/technologies/Ionic.astro";
+import Npm from "@icons/v2/technologies/Npm.astro";
+import Gitlab from "@icons/v2/technologies/Gitlab.astro";
+import Ios from "@icons/v2/technologies/Ios.astro";
+import Android from "@icons/v2/technologies/Android.astro";
+
+const projects = [
+    {
+        projectTitle: "Optum Common Module",
+        projectType: "Support",
+        projectLink: "https://curo.optum.com/",
+        projectImage: "optum-lhc-group-white.png",
+        projectTechnologies: ['Angular','Typescript', 'Npm', 'Github','Cucumber', 'Selenium' ]
+    },
+    {
+        projectTitle: "Spectrum Portal",
+        projectType: "Support",
+        projectLink: "https://www.spectrum.net/",
+        projectImage: "spectrum.jpg",
+        projectTechnologies: ['Angular','Typescript', 'Npm', 'Gitlab','Ionic', 'Android', 'Ios','Cucumber', 'Selenium',  ]
+    },
+]
+---
+
+<section class="py-10" id="Projects">
+    <div class="py-5">
+        <Heading index="02." title="Recent projects" link="View all projects" />
+    </div>
+    <div class="md:flex md:gap-x-1">
+        {
+            projects.map((project, index) => (
+            <div
+            class="text-xl md:text-2xl flex flex-col gap-y-2 tracking-tight leading-normal mb-10 border-b md:border-b-0 md:w-[50%]"
+        >
+            <div class="md:h-[250px]">
+                <img src=`projects/${project.projectImage}` alt={project.projectTitle} class="md:max-h-full" />
+            </div>
+
+            <a
+                class="font-semibold text-2xl md:text-3xl hover:text-[#ef4d48]"
+                href={project.projectLink}
+                target="_blank"
+            >
+                {project.projectTitle}</a
+            >
+            <span class="font-semibold text-lg md:text-xl text-black/60">{project.projectType}</span>
+            <div class="my-2 flex gap-x-2">
+
+                { project.projectTechnologies.map((technology, index) => {
+                    switch (technology) {
+                        case "Angular":
+                            return <Angular />;
+                        case "Typescript":
+                            return <Typescript />;
+                        case "Npm":
+                            return <Npm />;
+                        case "Github":
+                            return <Github />;
+                        case "Gitlab":
+                            return <Gitlab />;
+                        case "Cucumber":
+                            return <Cucumber />;
+                        case "Selenium":
+                            return <Selenium />;
+                        case "Ionic":
+                            return <Ionic />;
+                        case "Android":
+                            return <Android />;
+                        case "Ios":
+                            return <Ios />;
+                        }
+                    }
+                )}
+            </div>
+        </div>
+            ))
+        }
+    </div>
+</section>

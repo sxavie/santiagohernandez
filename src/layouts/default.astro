@@ -1,0 +1,28 @@
+---
+import Footer from "@components/_V2/Footer.astro";
+import Header from "@components/_V2/Header.astro";
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>Santiago Hernandez | website</title>
+    </head>
+    <body>
+        <div class="max-w-[1240px] min-w-[400px] m-auto">
+            <Header />
+            <main class="p-4">
+                <slot />
+            </main>
+            <Footer />
+        </div>
+    </body>
+
+    <style>
+
+    </style>
+
+</html>

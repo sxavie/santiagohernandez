@@ -1,0 +1,26 @@
+---
+import MenuIcon from "@icons/v2/BuergerMenu.astro";
+import Console from "@icons/v2/Console.astro";
+import Hero from "./Hero.astro";
+---
+
+<header class="max-w-[1440px] p-6">
+    <nav class="flex justify-between items-center mb-[2rem]">
+        <span class="font-bold text-md tracking-tight flex gap-x-2 items-center">
+            <Console />
+            Santiago Hernandez</span
+        >
+
+        <button class="p-2 rounded-full sm:hidden">
+            <MenuIcon />
+        </button>
+
+        <div class="hidden sm:flex gap-x-10 text-xl font-semibold text-black/60">
+            <a href="#" class="hover:text-[#ef4d48]" >Home</a>
+            <a href="#Projects" class="hover:text-[#ef4d48]" >Work</a>
+            <a href="#PreFooter" class="hover:text-[#ef4d48]" >Contact</a>
+        </div>
+    </nav>
+
+    <Hero />
+</header>
